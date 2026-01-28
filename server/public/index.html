@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat App</title>
+    <script src="https://kit.fontawesome.com/dccc381fb5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <div class="main">
+        <h1>Chat App</h1>
+        <div class="name">
+            <span><i class="fa-solid fa-user"></i></span>
+            <input type="text" id="name-input" class="name-input" value="anonymous" maxlength="20">
+        </div>
+
+        <ul class="msg-container" id="msg-container">
+            <!-- <li class="left-msg">
+                <p class="msg">
+                    Lorem ipsum dolor
+                    <span>bluebird . 26 Jan 12:42</span>
+                </p>
+            </li> -->
+            <!-- <li class="right-msg">
+                <p class="msg">
+                    Lorem ipsum
+                    <span>bluebird . 26 Jan 12:42</span>
+            </li> -->
+            <li class="msg-feedback" id="typing-box">
+                <p class="feedback" id="feedback"></p>
+            </li>
+
+        </ul>
+        <form class="msg-form" id="msg-form">
+            <input type="text" name="message" id="msg-input" class="msg-input">
+            <div class="divider"></div>
+            <button type="submit" class="send-button" id="send-button">
+                send <span><i class="fa-solid fa-paper-plane"></i></span>
+            </button>
+        </form>
+
+        <div class="client-count">
+            Total Connected Users: <span id="client-count">0</span>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
